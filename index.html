@@ -21,10 +21,15 @@
       >
         <div class="mx-w-[1920px] mx-auto ">
           <div class="flex justify-between items-center">
+<!-- logo -->
+
             <div class="">
               <img src="images/Logo.png" alt="Logo.png" />
             </div>
-            <div class="">
+
+<!-- Desktop Menu -->
+
+            <div class="hidden">
               <ul class="flex gap-x-10 font-poppins">
                 <li>
                   <a
@@ -70,6 +75,68 @@
                 </li>
               </ul>
             </div>
+
+<!-- Mobile Meui Button -->
+
+<div class="md:hidden">
+  <button id="menu-btn" class="text-gray-700 focus:outline-none">
+    <i class="fa-solid fa-bars"></i>
+  </button>
+</div>
+
+<!-- Mobile menu -->
+
+<div id="menu" class="hidden md:hidden">
+   <ul class=" gap-x-10 font-poppins">
+                <li>
+                  <a
+                    href="#"
+                    class="relative before:absolute before:left-0 before:-bottom-1 before:h-0.5 before:w-0 before:bg-Secondary before:content-[''] before:transition-all hover:before:w-full before:duration-300"
+                    >Home</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="#"
+                    class="relative before:absolute before:left-0 before:-bottom-1 before:h-0.5 before:w-0 before:bg-Secondary before:content-[''] before:transition-all hover:before:w-full before:duration-300"
+                    >Jobs</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="#"
+                    class="relative before:absolute before:left-0 before:-bottom-1 before:h-0.5 before:w-0 before:bg-Secondary before:contet-[''] before:transition-all hover:before:w-full before:duration-300"
+                    >Talents</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="#"
+                    class="relative before:absolute before:left-0 before:-bottom-1 before:h-0.5 before:w-0 before:bg-Secondary before:content-[''] before:transition-all hover:before:w-full before:duration-300"
+                    >Subscriptions</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="#"
+                    class="relative before:absolute before:left-0 before:-bottom-1 before:h-0.5 before:w-0 before:bg-Secondary before:content-[''] before:transition-all hover:before:w-full before:duration-300"
+                    >Pages</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="#"
+                    class="relative before:absolute before:left-0 before:-bottom-1 before:h-0.5 before:w-0 before:bg-Secondary before:content-[''] before:transition-all hover:before:w-full before:duration-300"
+                    >Contact</a
+                  >
+                </li>
+              </ul>
+</div>
+
+
+
+
+
             <div class="font-poppins gap-x-3">
               <a
                 href="#"
@@ -85,11 +152,22 @@
           </div>
         </div>
       </div>
+
+<script>
+  const btn = document.getElementById("menu-btn");
+  const menu = document.getElementById("menu");
+  btn.addEventListener("click",() => {
+    menu.classList.toggle("hidden");
+  });
+</script>
+
+
+
     </header>
 
     <!-- ...............Banner_Part........... -->
-    <section id="bannerPart">
-      <div class="bg-gradient-to-r from-[#E2F7F2] to-white pt-24 pb-24.25 lg:px-0 px-4">
+    <section id="bannerPart" class="">
+      <div class="bg-gradient-to-r from-[#E2F7F2] to-white pt-24 pb-24.25 lg:px-0 px-4 ">
         <div class="max-w-bnerContainer mx-auto lg:pl-21   ">
           <div class="lg:flex items-center justify-between">
             <!-- ................Leaft_side..... -->
@@ -138,13 +216,13 @@
                 </div>
               </div>
               <div class="lg:w-150 w-full lg:mt-8 mt-4">
-                <div class=" flex lg:items-center   flex-wrap lg:space-x-4 space-x-2 ">
+                <div class=" flex lg:items-center md:items-center  flex-wrap lg:space-x-4 space-x-2 ">
                  <div class= "flex lg:gap-x-2.5 gap-x-1  items-center bg-white text-text  border border-[#677181] rounded-xl px-3 py-2 hover:scale-105 transition-all duration-300 cursor-pointer">
                    <p class="lg:text-[14px]  text-[12px]   font-poppins font-normal "> Design & Creative</p>
                     
                     <i class="fa-solid fa-arrow-right"></i>
                   </div>
-                <div class="lg:mt-0 mt-4">
+                <div class="lg:mt-0 md:mt-0  mt-4">
                      <div class= "flex lg:gap-x-2.5 gap-x-1  items-center bg-white text-text  border border-[#677181] rounded-xl px-3 py-2 hover:scale-105 transition-all duration-300 cursor-pointer">
                    <p class="lg:text-[14px]  text-[12px] font-poppins font-normal "> website Development</p>
                     
@@ -152,7 +230,7 @@
                   </div>
                 </div>
 
-               <div class=" lg:mt-0 mt-4">
+               <div class=" lg:mt-0 md:mt-0 mt-4">
                    <div class= "flex lg:gap-x-2.5 gap-x-1 items-center bg-white text-text  border border-[#677181] rounded-xl px-3 py-2 hover:scale-105 transition-all duration-300 cursor-pointer">
                    <p class="lg:text-[14px]  text-[12px] font-poppins font-normal  "> SEO</p>
                     
@@ -1358,7 +1436,7 @@ Programmer</p>
 
 </div>
 <div class="mt-6">
-  <div class="flex  lg:items-center flex-wrap  gap-x-2.5  ">
+  <div class="flex  lg:items-center md:items-center    flex-wrap  gap-x-2.5  ">
   <div class="bg-gray-200 px-2 py-1.5 rounded-xl">
 <p class="text-[14px]  text-[#3B4759] font-inter font-normal  ">Figma</p>
 
@@ -1367,16 +1445,16 @@ Programmer</p>
     <p class="text-[14px]  text-[#3B4759] font-inter font-normal  " > Mobile App</p></div>
   <div class="bg-gray-200 px-2 py-1.5 rounded-xl">
     <p class="text-[14px]  text-[#3B4759] font-inter font-normal  " >Branding</p> </div>
-  <div class="bg-gray-200 px-2 py-1.5 rounded-xl lg:mt-0 mt-3">
+  <div class="bg-gray-200 px-2 py-1.5 rounded-xl lg:mt-0 md:mt-0 mt-3">
     <p class="text-[14px]  text-[#3B4759] font-inter font-normal  " >Sales Copy</p> </div>
 </div>
 </div>
 
 <div class=" mt-3">
-  <div class="flex lg:items-center flex-wrap gap-x-2.5 ">
+  <div class="flex lg:items-center md:items-center  flex-wrap gap-x-2.5 ">
   <div class="bg-gray-200 px-2 py-1.5 rounded-xl"><p class="text-[14px]  text-[#3B4759] font-inter font-normal">Adobe Photoshop</p> </div>
   <div class="bg-gray-200 px-2 py-1.5 rounded-xl"><p class="text-[14px]  text-[#3B4759] font-inter font-normal">Flyer template</p> </div>
-  <p class="text-text font-inter font-normal lg:mt-0 mt-3">+1</p>
+  <p class="text-text font-inter font-normal lg:mt-0 md:mt-0 mt-3">+1</p>
   
 </div>
 </div>
@@ -1432,23 +1510,23 @@ hover:bg-Secondary transition-all duration-300 hover:text-white">
  
 </div>
 <div class="mt-6">
-  <div class="flex lg:items-center flex-wrap  gap-x-2.5  ">
+  <div class="flex lg:items-center md:items-center flex-wrap  gap-x-2.5  ">
   <div class="bg-gray-200 px-2 py-1.5 rounded-xl">
 <p class="text-[14px]  text-[#3B4759] font-inter font-normal  ">Brochure Design</p>
 
   </div>
   <div class="bg-gray-200 px-2 py-1.5 rounded-xl">
     <p class="text-[14px]  text-[#3B4759] font-inter font-normal  " > Flyer Design</p></div>
-  <div class="bg-gray-200 px-2 py-1.5 rounded-xl lg:mt-0 mt-3">
+  <div class="bg-gray-200 px-2 py-1.5 rounded-xl lg:mt-0 md:mt-0 mt-3">
     <p class="text-[14px]  text-[#3B4759] font-inter font-normal  " >Branding</p> </div>
 </div>
 </div>
 
 <div class=" mt-3">
-  <div class="flex lg:items-center flex-wrap gap-x-2.5 ">
+  <div class="flex lg:items-center md:items-center flex-wrap gap-x-2.5 ">
   <div class="bg-gray-200 px-2 py-1.5 rounded-xl"><p class="text-[14px]  text-[#3B4759] font-inter font-normal">Adobe Photoshop</p> </div>
   <div class="bg-gray-200 px-2 py-1.5 rounded-xl"><p class="text-[14px]  text-[#3B4759] font-inter font-normal">Flyer template</p> </div>
-  <p class="text-text font-inter font-normal lg:mt-0 mt-3">+3</p>
+  <p class="text-text font-inter font-normal lg:mt-0 md:mt-0 mt-3">+3</p>
   
 </div>
 </div>
@@ -1483,30 +1561,34 @@ hover:bg-Secondary transition-all duration-300 hover:text-white">
 <div class="flex items-start  ">
    <div class="flex items-center gap-x-3">
   <img src="images/Ferlancr3.png" alt="Ferlancr1.png">
+
+
 <div class="">
+
+
  <div class="flex items-center gap-x-2.5">
- <p class=" lg:text-[20px] text-base font-poppins font-medium lg:leading-8">Jacob Jones</p>
-  <div class="flex items-center gap-x-4 "> 
+
+   <p class=" lg:text-[20px] text-base font-poppins font-medium leading-8">Jacob Jones</p>
+
+<div class="flex items-center gap-x-4"> 
   <div class=" bg-gray-400 h-8 w-0.5 "></div>
-  <div class="bg-[#60baa042] rounded-3xl px-1.5 py-1 text-Secondary ">
-    <p class="lg:text-[14px] text-[12px]  font-poppins font-medium "> Vetted Pro</p>
+  <div class="bg-[#60baa042] rounded-3xl px-1.5 py-1 text-Secondary">
+    <p class="lg:text-[14px] text-[12px] font-poppins font-medium "> Vetted Pro</p>
   </div>
  </div>
 
-
-
- </div>
+</div>
   <div class="flex items-center gap-x-0.5 mt-1.5">
     <i  class="fa-solid fa-star  text-amber-400"></i>
   <p>  <span class=" text-[14px] font-poppins font-medium">4.0</span> (212)</p>
   </div>
-  <p class="text-base font-poppins font-normal mt-1.5">Digital Marketer</p>
+  <p class="text-base font-poppins font-normal mt-1.5 w-63.75">Digital Marketer</p>
 </div>
  </div>
  
 </div>
 <div class="mt-6">
-  <div class="flex lg:items-center flex-wrap   gap-x-2.5  ">
+  <div class="flex lg:items-center md:items-center flex-wrap   gap-x-2.5  ">
   <div class="bg-gray-200 px-2 py-1.5 rounded-xl">
 <p class="text-[14px]  text-[#3B4759] font-inter font-normal  ">SEO</p>
 
@@ -1515,7 +1597,7 @@ hover:bg-Secondary transition-all duration-300 hover:text-white">
     <p class="text-[13px]  text-[#3B4759] font-inter font-normal  " > Email Marketing</p></div>
   <div class="bg-gray-200 px-2 py-1.5 rounded-xl">
     <p class="text-[14px]  text-[#3B4759] font-inter font-normal  " >Branding</p> </div>
-  <div class="bg-gray-200 px-2 py-1.5 rounded-xl lg:mt-0 mt-3">
+  <div class="bg-gray-200 px-2 py-1.5 rounded-xl lg:mt-0 md:mt-0  mt-3">
     <p class="text-[14px]  text-[#3B4759] font-inter font-normal   " >Business</p> </div>
 </div>
 </div>
@@ -1528,10 +1610,10 @@ hover:bg-Secondary transition-all duration-300 hover:text-white">
 
 
 <div class=" mt-3">
-  <div class="flex lg:items-center flex-wrap gap-x-2.5 ">
+  <div class="flex lg:items-center md:items-center flex-wrap gap-x-2.5 ">
   <div class="bg-gray-200 px-2 py-1.5 rounded-xl"><p class="text-[14px]  text-[#3B4759] font-inter font-normal">Company profile</p> </div>
   <div class="bg-gray-200 px-2 py-1.5 rounded-xl"><p class="text-[14px]  text-[#3B4759] font-inter font-normal">Flyer template</p> </div>
-  <p class="text-text font-inter font-normal lg:mt-0 mt-3">+4</p>
+  <p class="text-text font-inter font-normal lg:mt-0 md:mt-0 mt-3">+4</p>
   
 </div>
 </div>
@@ -1575,7 +1657,7 @@ hover:bg-Secondary transition-all duration-300 hover:text-white">
 
 </section>
     <!-- .................Footer_Part............... -->
-     <footer id="footer" class=" lg:pt-30 pt-15 lg:px-0 px-4">
+     <footer id="footer" class=" lg:pt-30 pt-10 ">
  <div class="bg-[url('/images/Footer.jpg')] bg-no-repeat bg-center bg-cover lg:h-197.5 h-162.5">
 
 <div class="max-w-mContainer m-auto">
